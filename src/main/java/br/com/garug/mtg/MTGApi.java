@@ -33,7 +33,7 @@ public interface MTGApi {
 		return null;
 	}
     
-    public static MTGEntity findOne(Integer id, MTGEntityEnum type) {
+    public static MTGEntity findOne(String id, MTGEntityEnum type) {
     	JsonNode node = getJson(API_URL + "/" + type.getMultiple() + "/" + id);
         ObjectMapper mapper = new ObjectMapper();
         try {
