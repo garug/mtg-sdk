@@ -2,12 +2,11 @@ package br.com.garug.mtg.implementations;
 
 import br.com.garug.mtg.MTGApi;
 import br.com.garug.mtg.entities.enums.MTGEntityEnum;
-import br.com.garug.mtg.entities.implementations.Card;
+import br.com.garug.mtg.entities.implementations.Set;
 
 public interface SetMTGApi extends MTGApi {
-MTGEntityEnum type = MTGEntityEnum.CARD;
-	// TODO change entity to ENUM
-	public default Card findOne(Integer id) {
-		return (Card) MTGApi.findOne(id, type);
+MTGEntityEnum type = MTGEntityEnum.SET;
+	public default Set findOne(String id) {
+		return (Set) MTGApi.findOne(id, type);
 	}
 }
