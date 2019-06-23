@@ -1,9 +1,16 @@
 package br.com.garug.mtg.entities.suppliers;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class ForeignData {
     private String name;
     private String text;
     private String flavor;
+    private String imageUrl;
+    private String language;
+    @JsonProperty(value = "multiverseid")
+    private int multiverseId;
+    
     public String getName() {
 		return name;
 	}
@@ -40,7 +47,4 @@ public class ForeignData {
 	public void setMultiverseId(int multiverseId) {
 		this.multiverseId = multiverseId;
 	}
-	private String imageUrl;
-    private String language;
-    private int multiverseId;
 }
