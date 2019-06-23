@@ -4,10 +4,11 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import br.com.garug.mtg.entities.implementations.Card;
+import br.com.garug.mtg.entities.implementations.Set;
 
 public enum MTGEntityEnum {
 	CARD("card", "cards", new ObjectMapper().getTypeFactory().constructType(Card.class)),
-	SET("set", "sets", new ObjectMapper().getTypeFactory().constructType(Card.class));
+	SET("set", "sets", new ObjectMapper().getTypeFactory().constructType(Set.class));
 	
 	private String one;
 	private String multiple;
