@@ -1,10 +1,13 @@
 package br.com.garug.mtg.entities.implementations;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import br.com.garug.mtg.entities.MTGEntity;
 import br.com.garug.mtg.entities.suppliers.ForeignData;
 import br.com.garug.mtg.entities.suppliers.Legality;
 import br.com.garug.mtg.entities.suppliers.Ruling;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Card extends MTGEntity {
 
     private String id;
